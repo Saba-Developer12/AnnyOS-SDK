@@ -5,7 +5,14 @@ and sample applications for developing programs for AnnyOS.
 
 ## Build an AP application
 
-With Python 3 installed, run from this repository root:
+With Python 3 installed, build all sample applications from this repository root:
+
+```sh
+make build
+```
+
+The generated `.AP` files are written to the ignored `build/` directory. To pack
+one application manually:
 
 ```sh
 python3 tools/ap_pack.py apps/HELLO.apasm HELLO.AP

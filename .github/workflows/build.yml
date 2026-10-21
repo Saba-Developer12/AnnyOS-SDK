@@ -1,0 +1,32 @@
+name: Build AnnyOS SDK
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out SDK source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build sample applications
+        run: make build
+
+      - name: Upload SDK sample applications
+        uses: actions/upload-artifact@v4
+        with:
+          name: AnnyOS-SDK-${{ github.sha }}
+          if-no-files-found: error
+          path: build/*.AP
