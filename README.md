@@ -1,7 +1,9 @@
 ﻿# AnnyOS SDK
 
 The AnnyOS SDK provides the public headers, AP v1 packer, format documentation,
-and sample applications for developing programs for AnnyOS.
+and sample applications for developing programs for AnnyOS. AP applications can
+print text and command-line arguments or call documented system services,
+including date/time, memory information, reboot, sleep, and PC speaker tone.
 
 ## Build an AP application
 

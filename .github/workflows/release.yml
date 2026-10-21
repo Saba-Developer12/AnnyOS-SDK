@@ -20,11 +20,11 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Build sample applications
-        run: make build
+      - name: Package SDK archive
+        run: python3 tools/package_sdk.py build/AnnyOS-SDK.zip
 
       - name: Publish SDK release
         uses: softprops/action-gh-release@v2
         with:
-          files: build/*.AP
+          files: build/AnnyOS-SDK.zip
           generate_release_notes: true
