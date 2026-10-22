@@ -1,24 +1,26 @@
-﻿# AnnyOS SDK
+# AnnyOS SDK
 
-The AnnyOS SDK provides the public headers, AP v1 packer, format documentation,
-and sample applications for developing programs for AnnyOS. AP applications can
-print text and command-line arguments or call documented system services,
-including date/time, memory information, reboot, sleep, and PC speaker tone.
+Current version: **0.3.0**
 
-## Build an AP application
+The AnnyOS SDK contains the public `.AP` v1 format and API headers, the AADL
+compiler, core AADL libraries, and sample applications. AADL supports classes,
+inheritance, statically resolved objects and methods, and recursive imports.
+Compiled applications are bounded AP v1 bytecode interpreted by AnnyOS.
 
-With Python 3 installed, build all sample applications from this repository root:
+## Build sample applications
+
+Requirements: Python 3.
 
 ```sh
 make build
 ```
 
-The generated `.AP` files are written to the ignored `build/` directory. To pack
-one application manually:
+The compiler writes sample `.AP` files to the ignored `build/` directory. To
+compile one application directly:
 
 ```sh
-python3 tools/ap_pack.py apps/HELLO.apasm HELLO.AP
+python3 tools/aadlc.py apps/HELLO.aadl build/HELLO.AP
 ```
 
-See `docs/SDK.md` for the SDK overview and `docs/AP_FORMAT.md` for the binary
-format and supported API services.
+See [AADL](docs/AADL.md), the [AP format](docs/AP_FORMAT.md), and the
+[SDK guide](docs/SDK.md) for language, bytecode, and API details.
