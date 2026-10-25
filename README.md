@@ -1,6 +1,6 @@
 # AnnyOS SDK
 
-Current version: **0.4.1**
+Current version: **0.4.2**
 
 The AnnyOS SDK provides the public `.AP` v1 format and API headers, the AADL
 compiler, core AADL libraries, and sample applications. The compiler supports
