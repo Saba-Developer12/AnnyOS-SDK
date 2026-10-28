@@ -1,13 +1,14 @@
 # AnnyOS SDK
 
-Current version: **0.4.6**
+Current version: **0.4.7**
 
 The AnnyOS SDK provides the public `.AP` v1 format and API headers, the AADL
 compiler, core AADL libraries, and sample applications. The compiler supports
 recursive imports, compile-time classes and inheritance, static method
 resolution, application arguments, and bounded AP output. ConfigSave services
-use AnnyOS API v2; the expanded service catalog uses API v3. AP applications remain interpreted bytecode; the SDK does
-not provide native x86 compilation or process isolation.
+use API v2, extended system services use API v3, and the CURL host-bridge
+wrapper uses API v4. AP applications remain interpreted bytecode; the SDK
+does not provide native x86 compilation or process isolation.
 
 ## Build sample applications
 
